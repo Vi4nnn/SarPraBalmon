@@ -16,9 +16,9 @@
           <div class="row">
             <div class="col-md-4">
               <div class="mb-3">
-                <label for="student_id" class="form-label">Mahasiswa:</label>
+                <label for="student_id" class="form-label">Pegawai:</label>
                 <select name="student_id" id="student_id" class="form-select">
-                  <option value="">Pilih mahasiswa..</option>
+                  <option value="">Pilih pegawai..</option>
                   @foreach ($students as $student)
                   <option value="{{ $student->id }}" @selected(request('student_id')==$student->id)>{{
                     $student->identification_number }} - {{ $student->name }}
@@ -29,9 +29,9 @@
             </div>
             <div class="col-md-4">
               <div class="mb-3">
-                <label for="program_study_id" class="form-label">Program Studi:</label>
+                <label for="program_study_id" class="form-label">Divisi:</label>
                 <select name="program_study_id" id="program_study_id" class="form-select">
-                  <option value="">Pilih program studi..</option>
+                  <option value="">Pilih divisi..</option>
                   @foreach ($programStudies as $programStudy)
                   <option value="{{ $programStudy->id }}" @selected(request('program_study_id')==$programStudy->id)>{{
                     $programStudy->name }}
@@ -40,7 +40,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-md-4">
+            {{-- <div class="col-md-4">
               <div class="mb-3">
                 <label for="school_class_id" class="form-label">Kelas:</label>
                 <select name="school_class_id" id="school_class_id" class="form-select">
@@ -52,7 +52,7 @@
                   @endforeach
                 </select>
               </div>
-            </div>
+            </div> --}}
           </div>
 
           <div class="row">
@@ -103,8 +103,8 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama Mahasiswa</th>
-                <th scope="col">Komoditas</th>
+                <th scope="col">Nama Pegawai</th>
+                <th scope="col">Barang</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jam Pinjam</th>
                 <th scope="col">Jam Kembali</th>

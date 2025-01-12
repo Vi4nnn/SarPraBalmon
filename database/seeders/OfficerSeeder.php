@@ -19,18 +19,18 @@ class OfficerSeeder extends Seeder
             'phone_number' => fake()->phoneNumber(),
         ]);
 
-        $officers = Officer::factory(100)->make()->toArray();
+        // $officers = Officer::factory(100)->make()->toArray();
 
-        $recordsToInsert = [];
-        foreach ($officers as $officer) {
-            $createdAt = now();
-            $officer['created_at'] = $createdAt;
-            $officer['updated_at'] = $createdAt;
-            $recordsToInsert[] = $officer;
-        }
+        // $recordsToInsert = [];
+        // foreach ($officers as $officer) {
+        //     $createdAt = now();
+        //     $officer['created_at'] = $createdAt;
+        //     $officer['updated_at'] = $createdAt;
+        //     $recordsToInsert[] = $officer;
+        // }
 
-        foreach (array_chunk($recordsToInsert, count($recordsToInsert) / 2) as $chunk) {
-            Officer::insert($chunk);
-        }
+        // foreach (array_chunk($recordsToInsert, count($recordsToInsert) / 2) as $chunk) {
+        //     Officer::insert($chunk);
+        // }
     }
 }

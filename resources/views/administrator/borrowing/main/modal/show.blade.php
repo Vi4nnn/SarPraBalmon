@@ -9,18 +9,18 @@
         <div class="row">
           <div class="col-md-12 col-lg-6">
             <div class="alert alert-primary">
-              Data di bawah adalah detail data mahasiswa.
+              Data di bawah adalah detail data peminjam.
             </div>
             <div class="row">
               <div class="col-md-12 col-lg-6">
                 <div class="mb-3">
-                  <label class="form-label">Nomor Identitas Mahasiswa</label>
+                  <label class="form-label">Nomor Identitas Karyawan</label>
                   <input class="form-control" id="student_identification_number" disabled>
                 </div>
               </div>
               <div class="col-md-12 col-lg-6">
                 <div class="mb-3">
-                  <label class="form-label">Nama Mahasiswa</label>
+                  <label class="form-label">Nama Pegawai</label>
                   <input class="form-control" id="student_name" disabled>
                 </div>
               </div>
@@ -29,14 +29,14 @@
             <div class="row">
               <div class="col-md-6 col-lg-6">
                 <div class="mb-3">
-                  <label class="form-label">Program Studi</label>
+                  <label class="form-label">Divisi</label>
                   <div class="input-group">
                     <span class="d-block input-group-text"><i class="bi bi-bookmarks-fill"></i></span>
                     <input class="form-control" id="program_study_name" disabled>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-6">
+              {{-- <div class="col-md-6 col-lg-6">
                 <div class="mb-3">
                   <label class="form-label">Kelas</label>
                   <div class="input-group">
@@ -45,7 +45,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
 
             <div class="row">
               <div class="col-md-12">
@@ -67,7 +67,7 @@
             <div class="row">
               <div class="col-md-12 col-lg-12">
                 <div class="mb-3">
-                  <label class="form-label">Nama Komoditas</label>
+                  <label class="form-label">Nama Barang</label>
                   <div class="input-group">
                     <span class="d-block input-group-text"><i class="bi bi-collection-fill"></i></span>
                     <input class="form-control" id="commodity_name" disabled>

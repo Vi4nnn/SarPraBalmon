@@ -22,18 +22,17 @@ class StudentSeeder extends Seeder
             'phone_number' => '+628123456789',
         ]);
 
-        $students = Student::factory(150)->make()->toArray();
 
-        $recordsToInsert = [];
-        foreach ($students as $student) {
-            $createdAt = now();
-            $student['created_at'] = $createdAt;
-            $student['updated_at'] = $createdAt;
-            $recordsToInsert[] = $student;
-        }
+        // $recordsToInsert = [];
+        // foreach ($students as $student) {
+        //     $createdAt = now();
+        //     $student['created_at'] = $createdAt;
+        //     $student['updated_at'] = $createdAt;
+        //     $recordsToInsert[] = $student;
+        // }
 
-        foreach (array_chunk($recordsToInsert, count($recordsToInsert) / 2) as $chunk) {
-            Student::insert($chunk);
-        }
+        // foreach (array_chunk($recordsToInsert, count($recordsToInsert) / 2) as $chunk) {
+        //     Student::insert($chunk);
+        // }
     }
 }

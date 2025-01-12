@@ -14,11 +14,11 @@
       <div class="card-body">
         <div class="alert alert-warning" role="alert">
           <i class="bi bi-exclamation-circle"></i>
-          Setiap data peminjaman dari mahasiswa petugas wajib melakukan validasi dengan menekan tombol
+          Setiap data peminjaman dari pegawai petugas wajib melakukan validasi dengan menekan tombol
           validasi
           pada data di tabel agar petugas bisa memberikan pertanggung jawaban jika terjadinya komoditas yang
           hilang. Silahkan petugas melakukan validasi jika jam kembali sudah terisi. Jika jam kembali sudah terisi maka
-          komoditas yang dipinjam telah dikembalikan oleh mahasiswa tersebut.
+          komoditas yang dipinjam telah dikembalikan oleh pegawai tersebut.
 
           <div class="fw-bold pt-3">Diharapkan kembali petugas sebelum melakukan validasi melakukan cek terhadap
             komoditas yang sudah
@@ -29,9 +29,9 @@
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="student_id" class="form-label">Mahasiswa:</label>
+                <label for="student_id" class="form-label">Pegawai:</label>
                 <select name="student_id" id="student_id" class="form-select">
-                  <option value="">Pilih mahasiswa..</option>
+                  <option value="">Pilih Pegawai..</option>
                   @foreach ($students as $student)
                   <option value="{{ $student->id }}" @selected(request('student_id')==$student->id)>{{
                     $student->identification_number }} - {{ $student->name }}
@@ -65,9 +65,9 @@
             </div>
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="commodity_id" class="form-label">Komoditas:</label>
+                <label for="commodity_id" class="form-label">Barang:</label>
                 <select name="commodity_id" id="commodity_id" class="form-select">
-                  <option value="">Pilih komoditas..</option>
+                  <option value="">Pilih Barang..</option>
                   @foreach ($commodities as $commodity)
                   <option value="{{ $commodity->id }}" @selected(request('commodity_id')==$commodity->id)>{{
                     $commodity->name }}
@@ -86,8 +86,8 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama Mahasiswa</th>
-                <th scope="col">Komoditas</th>
+                <th scope="col">Nama Peminjam</th>
+                <th scope="col">Barang</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jam Pinjam</th>
                 <th scope="col">Jam Kembali</th>

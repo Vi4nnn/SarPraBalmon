@@ -14,23 +14,23 @@
     <li class="sidebar-item {{ request()->routeIs('administrators.commodities.*') ? 'active' : '' }}">
       <a href="{{ route('administrators.commodities.index') }}" class="sidebar-link">
         <i class="bi bi-collection-fill"></i>
-        <span>Komoditas</span>
+        <span>Barang</span>
       </a>
     </li>
 
     <li class="sidebar-item {{ request()->routeIs('administrators.program-studies.*') ? 'active' : '' }}">
       <a href="{{ route('administrators.program-studies.index') }}" class="sidebar-link">
         <i class="bi bi-bookmarks-fill"></i>
-        <span>Program Studi</span>
+        <span>Divisi</span>
       </a>
     </li>
 
-    <li class="sidebar-item {{ request()->routeIs('administrators.school-classes.*') ? 'active' : '' }}">
+    {{-- <li class="sidebar-item {{ request()->routeIs('administrators.school-classes.*') ? 'active' : '' }}">
       <a href="{{ route('administrators.school-classes.index') }}" class="sidebar-link">
         <i class="bi bi-building-fill"></i>
         <span>Kelas</span>
       </a>
-    </li>
+    </li> --}}
 
     <li class="sidebar-item has-sub">
       <a href="#" class="sidebar-link">
@@ -55,7 +55,7 @@
     <li class="sidebar-item {{ request()->routeIs('administrators.students.*') ? 'active' : '' }}">
       <a href="{{ route('administrators.students.index') }}" class="sidebar-link">
         <i class="bi bi-people-fill"></i>
-        <span>Mahasiswa</span>
+        <span>Pegawai</span>
       </a>
     </li>
 

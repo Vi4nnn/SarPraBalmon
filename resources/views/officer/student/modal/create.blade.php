@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5">Tambah Mahasiswa</h1>
+        <h1 class="modal-title fs-5">Tambah Pegawai</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -11,11 +11,11 @@
           <div class="row">
             <div class="col-md-12 col-lg-4">
               <div class="mb-3">
-                <label for="identification_number" class="form-label">NIM Mahasiswa</label>
+                <label for="identification_number" class="form-label">NIK Pegawai</label>
                 <input type="number" name="identification_number"
                   class="form-control @error('identification_number', 'store') is-invalid @enderror"
                   @if($errors->hasBag('store'))
-                value="{{ old('identification_number') }}" @endif placeholder="Masukkan nim mahasiswa.." required>
+                value="{{ old('identification_number') }}" @endif placeholder="Masukkan nim Pegawai.." required>
                 @error('identification_number', 'store')
                 <div class="d-block invalid-feedback">
                   {{ $message }}
@@ -25,10 +25,10 @@
             </div>
             <div class="col-md-12 col-lg-8">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Mahasiswa</label>
+                <label for="name" class="form-label">Nama Pegawai</label>
                 <input type="text" name="name" class="form-control @error('name', 'store') is-invalid @enderror"
                   @if($errors->hasBag('store'))
-                value="{{ old('name') }}" @endif placeholder="Masukkan nama mahasiswa.." required>
+                value="{{ old('name') }}" @endif placeholder="Masukkan nama Pegawai.." required>
                 @error('name', 'store')
                 <div class="d-block invalid-feedback">
                   {{ $message }}
@@ -41,7 +41,7 @@
           <div class="row">
             <div class="col-md-12 col-lg-6">
               <div class="mb-3">
-                <label for="program_study_id" class="form-label">Program Studi</label>
+                <label for="program_study_id" class="form-label">Divisi</label>
                 <select class="form-select @error('program_study_id', 'store') is-invalid @enderror"
                   name="program_study_id" required>
                   <option value="0">Pilih..</option>
@@ -59,7 +59,7 @@
                 @enderror
               </div>
             </div>
-            <div class="col-md-12 col-lg-6">
+            {{-- <div class="col-md-12 col-lg-6">
               <div class="mb-3">
                 <label for="school_class_id" class="form-label">Kelas</label>
                 <select class="form-select @error('school_class_id', 'store') is-invalid @enderror"
@@ -77,7 +77,7 @@
                 </div>
                 @enderror
               </div>
-            </div>
+            </div> --}}
           </div>
           <div class="row">
             <div class="col">

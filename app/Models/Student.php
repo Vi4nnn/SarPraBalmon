@@ -14,7 +14,7 @@ class Student extends Authenticatable
     protected $guard = 'student';
 
     protected $fillable = [
-        'program_study_id', 'school_class_id', 'name',
+        'program_study_id', 'name',
         'identification_number', 'name', 'email',
         'password', 'phone_number',
     ];
@@ -23,8 +23,8 @@ class Student extends Authenticatable
     {
         // Define filter conditions
         $conditions = [
-            'program_study_id' => fn ($q, $value) => $q->where('program_study_id', $value),
-            'school_class_id' => fn ($q, $value) => $q->where('school_class_id', $value)
+            'program_study_id' => fn ($q, $value) => $q->where('program_study_id', $value)
+            // 'school_class_id' => fn ($q, $value) => $q->where('school_class_id', $value)
         ];
 
         // Apply filter conditions based on request parameters
@@ -42,8 +42,4 @@ class Student extends Authenticatable
         return $this->hasOne(ProgramStudy::class, 'id', 'program_study_id');
     }
 
-    public function schoolClass(): HasOne
-    {
-        return $this->hasOne(SchoolClass::class, 'id', 'school_class_id');
-    }
 }

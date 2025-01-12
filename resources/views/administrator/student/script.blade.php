@@ -23,7 +23,7 @@
           $('#detailStudentModal #identification_number').val(res.data.identificationNumber);
           $('#detailStudentModal #name').val(res.data.name);
           $('#detailStudentModal #program_study_id').val(res.data.programStudy.name);
-          $('#detailStudentModal #school_class_id').val(res.data.schoolClass.name);
+          // $('#detailStudentModal #school_class_id').val(res.data.schoolClass.name);
           $('#detailStudentModal #email').val(res.data.email);
           $('#detailStudentModal #phone_number').val(res.data.phoneNumber);
         },
@@ -60,7 +60,7 @@
           $('#editStudentModal #identification_number').val(res.data.identificationNumber);
           $('#editStudentModal #name').val(res.data.name);
           $('#editStudentModal #program_study_id').val(res.data.programStudy.id);
-          $('#editStudentModal #school_class_id').val(res.data.schoolClass.id);
+          // $('#editStudentModal #school_class_id').val(res.data.schoolClass.id);
           $('#editStudentModal #email').val(res.data.email);
           $('#editStudentModal #phone_number').val(res.data.phoneNumber);
           $('#editStudentModal form').attr('action', updateURL);

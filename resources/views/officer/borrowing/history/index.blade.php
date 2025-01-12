@@ -13,7 +13,7 @@
       </div>
       <div class="card-body">
         <div class="alert alert-info" role="alert">
-          Tabel di bawah adalah daftar riwayat peminjaman yang sudah dilakukan oleh Mahasiswa.
+          Tabel di bawah adalah daftar riwayat peminjaman yang sudah dilakukan oleh Pegawai.
         </div>
 
         <x-filter-menu>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="student_id" class="form-label">Mahasiswa:</label>
+                <label for="student_id" class="form-label">Pegawai:</label>
                 <select name="student_id" id="student_id" class="form-select">
                   <option value="">Pilih mahasiswa..</option>
                   @foreach ($students as $student)
@@ -78,9 +78,9 @@
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="commodity_id" class="form-label">Komoditas:</label>
+                <label for="commodity_id" class="form-label">Barang:</label>
                 <select name="commodity_id" id="commodity_id" class="form-select">
-                  <option value="">Pilih komoditas..</option>
+                  <option value="">Pilih barang..</option>
                   @foreach ($commodities as $commodity)
                   <option value="{{ $commodity->id }}" @selected(request('commodity_id')==$commodity->id)>{{
                     $commodity->name }}
@@ -99,8 +99,8 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama Mahasiswa</th>
-                <th scope="col">Komoditas</th>
+                <th scope="col">Nama Pegawai</th>
+                <th scope="col">Barang</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Jam Pinjam</th>
                 <th scope="col">Jam Kembali</th>

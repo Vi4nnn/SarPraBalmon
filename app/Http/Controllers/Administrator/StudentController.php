@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Administrator\StoreStudentRequest;
 use App\Http\Requests\Administrator\UpdateStudentRequest;
 use App\Models\ProgramStudy;
-use App\Models\SchoolClass;
+// use App\Models\SchoolClass;
 use App\Models\Student;
 
 class StudentController extends Controller
@@ -18,18 +18,17 @@ class StudentController extends Controller
     {
         $query = Student::filter();
 
-        $students = $query->with('programStudy:id,name', 'schoolClass:id,name')->select(
+        $students = $query->with('programStudy:id,name',)->select(
             'id',
             'program_study_id',
-            'school_class_id',
             'identification_number',
             'name',
         )->get();
 
         $programStudies = ProgramStudy::select('id', 'name')->get();
-        $schoolClasses = SchoolClass::select('id', 'name')->get();
+        // $schoolClasses = SchoolClass::select('id', 'name')->get();
 
-        return view('administrator.student.index', compact('students', 'programStudies', 'schoolClasses'));
+        return view('administrator.student.index', compact('students', 'programStudies',));
     }
 
     /**
@@ -41,7 +40,6 @@ class StudentController extends Controller
 
         Student::create([
             'program_study_id' => $validated['program_study_id'],
-            'school_class_id' => $validated['school_class_id'],
             'identification_number' => $validated['identification_number'],
             'name' => $validated['name'],
             'email' => $validated['email'],
@@ -61,7 +59,7 @@ class StudentController extends Controller
 
         $student->update([
             'program_study_id' => $validated['program_study_id'],
-            'school_class_id' => $validated['school_class_id'],
+            // 'school_class_id' => $validated['school_class_id'],
             'identification_number' => $validated['identification_number'],
             'name' => $validated['name'],
             'email' => $validated['email'],

@@ -19,18 +19,18 @@ class AdministratorSeeder extends Seeder
             'phone_number' => fake()->phoneNumber(),
         ]);
 
-        $administrators = Administrator::factory(100)->make()->toArray();
+        // $administrators = Administrator::factory(5)->make()->toArray();
 
-        $recordsToInsert = [];
-        foreach ($administrators as $administrator) {
-            $createdAt = now();
-            $administrator['created_at'] = $createdAt;
-            $administrator['updated_at'] = $createdAt;
-            $recordsToInsert[] = $administrator;
-        }
+        // $recordsToInsert = [];
+        // foreach ($administrators as $administrator) {
+        //     $createdAt = now();
+        //     $administrator['created_at'] = $createdAt;
+        //     $administrator['updated_at'] = $createdAt;
+        //     $recordsToInsert[] = $administrator;
+        // }
 
-        foreach (array_chunk($recordsToInsert, count($recordsToInsert) / 2) as $chunk) {
-            Administrator::insert($chunk);
-        }
+        // foreach (array_chunk($recordsToInsert, count($recordsToInsert) / 2) as $chunk) {
+        //     Administrator::insert($chunk);
+        // }
     }
 }

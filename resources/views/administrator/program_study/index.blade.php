@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Daftar Program Studi')
-@section('description', 'Halaman daftar program studi')
+@section('title', 'Daftar Divisi')
+@section('description', 'Halaman daftar divisi')
 
 @section('content')
 <section class="row">
@@ -21,7 +21,7 @@
           <button type="button" class="btn btn-primary" data-bs-toggle="modal"
             data-bs-target="#createProgramStudyModal">
             <i class="bi bi-plus-circle-fill"></i>
-            Tambah Program Studi
+            Tambah Divisi
           </button>
         </x-button-group-flex>
 
@@ -30,7 +30,7 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama Program Studi</th>
+                <th scope="col">Nama Divisi</th>
                 <th scope="col">Aksi</th>
               </tr>
             </thead>

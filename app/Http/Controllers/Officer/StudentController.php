@@ -22,22 +22,22 @@ class StudentController extends Controller
             return $q->where('program_study_id', request('program_study_id'));
         });
 
-        $query->when(request()->filled('school_class_id'), function ($q) {
-            return $q->where('school_class_id', request('school_class_id'));
-        });
+        // $query->when(request()->filled('school_class_id'), function ($q) {
+        //     return $q->where('school_class_id', request('school_class_id'));
+        // });
 
         $students = $query->with('programStudy:id,name', 'schoolClass:id,name')->select(
             'id',
             'program_study_id',
-            'school_class_id',
+            // 'school_class_id',
             'identification_number',
             'name',
         )->get();
 
         $programStudies = ProgramStudy::select('id', 'name')->get();
-        $schoolClasses = SchoolClass::select('id', 'name')->get();
+        // $schoolClasses = SchoolClass::select('id', 'name')->get();
 
-        return view('officer.student.index', compact('students', 'programStudies', 'schoolClasses'));
+        return view('officer.student.index', compact('students', 'programStudies'));
     }
 
     /**
@@ -49,7 +49,7 @@ class StudentController extends Controller
 
         Student::create([
             'program_study_id' => $validated['program_study_id'],
-            'school_class_id' => $validated['school_class_id'],
+            // 'school_class_id' => $validated['school_class_id'],
             'identification_number' => $validated['identification_number'],
             'name' => $validated['name'],
             'email' => $validated['email'],
@@ -69,7 +69,7 @@ class StudentController extends Controller
 
         $student->update([
             'program_study_id' => $validated['program_study_id'],
-            'school_class_id' => $validated['school_class_id'],
+            // 'school_class_id' => $validated['school_class_id'],
             'identification_number' => $validated['identification_number'],
             'name' => $validated['name'],
             'email' => $validated['email'],

@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5">Tambah Program Studi</h1>
+        <h1 class="modal-title fs-5">Tambah Divisi</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -11,10 +11,10 @@
           <div class="row">
             <div class="col-12">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Program Studi</label>
+                <label for="name" class="form-label">Nama Divisi</label>
                 <input type="name" name="name" id="name"
                   class="form-control @error('name', 'store') is-invalid @enderror" @if($errors->hasBag('store'))
-                value="{{ old('name') }}" @endif placeholder="Masukkan nama program studi.." required>
+                value="{{ old('name') }}" @endif placeholder="Masukkan nama divisi..." required>
                 @error('name', 'store')
                 <div class="d-block invalid-feedback">
                   {{ $message }}

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Daftar Komoditas')
-@section('description', 'Halaman daftar komoditas')
+@section('title', 'Daftar Barang')
+@section('description', 'Halaman daftar barang')
 
 @section('content')
 <section class="row">
@@ -21,7 +21,7 @@
           <button type="button" class="btn btn-primary" id="createCommodityButton" data-bs-toggle="modal"
             data-bs-target="#createCommodityModal">
             <i class="bi bi-plus-circle-fill"></i>
-            Tambah Komoditas
+            Tambah Barang
           </button>
         </x-button-group-flex>
 
@@ -30,7 +30,7 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nama Komoditas</th>
+                <th scope="col">Nama Barang</th>
                 <th scope="col">Aksi</th>
               </tr>
             </thead>

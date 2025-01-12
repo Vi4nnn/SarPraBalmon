@@ -24,15 +24,15 @@ class BorrowingReportController extends Controller
 
         $students = Student::select('id', 'identification_number', 'name')->orderBy('identification_number')->get();
         $programStudies = ProgramStudy::select('id', 'name')->orderBy('name')->get();
-        $schoolClasses = SchoolClass::select('id', 'name')->orderBy('name')->get();
+        // $schoolClasses = SchoolClass::select('id', 'name')->orderBy('name')->get();
 
         return view(
             'administrator.borrowing.report.index',
             compact(
                 'borrowings',
                 'students',
-                'programStudies',
-                'schoolClasses'
+                'programStudies'
+                // 'schoolClasses'
             )
         );
     }

@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5">Ubah Komoditas</h1>
+        <h1 class="modal-title fs-5">Ubah Barang</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -12,8 +12,8 @@
           <div class="row">
             <div class="col-12">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Komoditas</label>
-                <input type="name" name="name" id="name" class="form-control" placeholder="Masukkan nama komoditas..">
+                <label for="name" class="form-label">Nama Barang</label>
+                <input type="name" name="name" id="name" class="form-control" placeholder="Masukkan nama barang...">
               </div>
             </div>
           </div>

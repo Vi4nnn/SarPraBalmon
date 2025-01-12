@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Daftar Mahasiswa')
-@section('description', 'Halaman daftar mahasiswa')
+@section('title', 'Daftar Pegawai')
+@section('description', 'Halaman daftar pegawai')
 
 @section('content')
 <section class="row">
@@ -15,7 +15,7 @@
         <x-button-group-flex>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createStudentModal">
             <i class="bi bi-plus-circle-fill"></i>
-            Tambah Mahasiswa
+            Tambah Pegawai
           </button>
         </x-button-group-flex>
 
@@ -23,9 +23,9 @@
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
-                <label for="program_study_id" class="form-label">Program Studi:</label>
+                <label for="program_study_id" class="form-label">Divis:</label>
                 <select name="program_study_id" id="program_study_id" class="form-select">
-                  <option value="">Pilih program studi..</option>
+                  <option value="">Pilih divisi..</option>
                   @foreach ($programStudies as $programStudy)
                   <option value="{{ $programStudy->id }}" @selected(request('program_study_id')==$programStudy->
                     id)>{{ $programStudy->name }}
@@ -34,7 +34,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
               <div class="mb-3">
                 <label for="school_class_id" class="form-label">Kelas:</label>
                 <select name="school_class_id" id="school_class_id" class="form-select">
@@ -47,7 +47,7 @@
                 </select>
               </div>
             </div>
-          </div>
+          </div> --}}
 
           <x-slot name="resetButtonURL">{{ route('officers.students.index') }}</x-slot>
         </x-filter-menu>
@@ -57,10 +57,10 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">NIM Mahasiswa</th>
-                <th scope="col">Nama Mahasiswa</th>
-                <th scope="col">Program Studi</th>
-                <th scope="col">Kelas</th>
+                <th scope="col">NIK Pegawai</th>
+                <th scope="col">Nama Pegawai</th>
+                <th scope="col">Divisi</th>
+                {{-- <th scope="col">Kelas</th> --}}
                 <th scope="col">Aksi</th>
               </tr>
             </thead>
@@ -73,7 +73,7 @@
                 </td>
                 <td>{{ $student->name }}</td>
                 <td>{{ $student->programStudy->name }}</td>
-                <td>{{ $student->schoolClass->name }}</td>
+                {{-- <td>{{ $student->schoolClass->name }}</td> --}}
                 <td>
                   <div class="btn-group gap-1">
                     <button type="button" class="btn btn-sm btn-primary showStudentButton" data-bs-toggle="modal"

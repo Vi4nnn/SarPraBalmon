@@ -25,7 +25,7 @@ class StoreStudentRequest extends FormRequest
     {
         return [
             'program_study_id' => 'required|min:1|exists:program_studies,id',
-            'school_class_id' => 'required|min:1|exists:school_classes,id',
+            // 'school_class_id' => 'required|min:1|exists:school_classes,id',
             'identification_number' => 'required|numeric|unique:students,identification_number|digits_between:3,255',
             'name' => 'required|string|min:3|max:255',
             'email' => 'required|email|unique:students,email|min:3|max:255',
@@ -46,9 +46,9 @@ class StoreStudentRequest extends FormRequest
             'program_study_id.min' => 'Kolom program studi tidak valid!',
             'program_study_id.exists' => 'Kolom program studi tidak valid!',
 
-            'school_class_id.required' => 'Kolom kelas wajib diisi!',
-            'school_class_id.min' => 'Kolom kelas tidak valid!',
-            'school_class_id.exists' => 'Kolom kelas tidak valid!',
+            // 'school_class_id.required' => 'Kolom kelas wajib diisi!',
+            // 'school_class_id.min' => 'Kolom kelas tidak valid!',
+            // 'school_class_id.exists' => 'Kolom kelas tidak valid!',
 
             'identification_number.required' => 'Kolom NIM mahasiswa wajib diisi!',
             'identification_number.numeric' => 'Kolom NIM mahasiswa harus berupa angka!',

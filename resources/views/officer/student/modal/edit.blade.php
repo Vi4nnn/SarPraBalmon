@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5">Ubah Mahasiswa</h1>
+        <h1 class="modal-title fs-5">Ubah Pegawai</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -12,15 +12,15 @@
           <div class="row">
             <div class="col-md-12 col-lg-4">
               <div class="mb-3">
-                <label for="identification_number" class="form-label">NIM Mahasiswa</label>
+                <label for="identification_number" class="form-label">NIK Pegawai</label>
                 <input type="text" name="identification_number" id="identification_number" class="form-control"
-                  placeholder="Masukkan nim mahasiswa..">
+                  placeholder="Masukkan nik Pegawai..">
               </div>
             </div>
             <div class="col-md-12 col-lg-8">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Mahasiswa</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Masukkan nama mahasiswa..">
+                <label for="name" class="form-label">Nama Pegawai</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Masukkan nama Pegawai..">
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-md-12 col-lg-6">
+            {{-- <div class="col-md-12 col-lg-6">
               <div class="mb-3">
                 <label for="school_class_id" class="form-label">Kelas</label>
                 <select class="form-select" name="school_class_id" id="school_class_id">
@@ -46,7 +46,7 @@
                   @endforeach
                 </select>
               </div>
-            </div>
+            </div> --}}
           </div>
           <div class="row">
             <div class="col">

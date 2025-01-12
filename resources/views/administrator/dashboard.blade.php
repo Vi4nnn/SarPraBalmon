@@ -37,7 +37,7 @@
                   </div>
                 </div>
                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                  <h6 class="text-muted font-semibold">Total Mahasiswa</h6>
+                  <h6 class="text-muted font-semibold">Total Pegawai</h6>
                   <h6 class="font-extrabold mb-0">{{ $counts['student'] }}</h6>
                 </div>
               </div>
@@ -96,7 +96,7 @@
     </div>
     <div class="card">
       <div class="card-header">
-        <h4>Mahasiswa Yang Baru Terdaftar</h4>
+        <h4>Pegawai Yang Baru Terdaftar</h4>
       </div>
       <div class="card-content pb-4">
         @foreach ($latestRegisteredStudents as $student)
@@ -110,7 +110,7 @@
         <div class="px-4">
           <a href="{{ route('administrators.students.index') }}"
             class="btn btn-block btn-xl btn-outline-primary font-bold mt-3">
-            Daftar Mahasiswa
+            Daftar Pegawai
           </a>
         </div>
       </div>

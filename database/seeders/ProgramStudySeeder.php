@@ -13,8 +13,7 @@ class ProgramStudySeeder extends Seeder
     public function run(): void
     {
         $programStudies = [
-            'Teknik Informatika', 'Teknik Informatika Multimedia',
-            'Teknik Komputer', 'Teknologi Rekayasa Komputer',
+            'Sarana Prasarana',
         ];
 
         foreach ($programStudies as $programStudy) {
