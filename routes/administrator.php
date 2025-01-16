@@ -11,7 +11,7 @@ use App\Http\Controllers\Administrator\ProgramStudyController;
 use App\Http\Controllers\Administrator\SchoolClassController;
 use App\Http\Controllers\Administrator\StudentController;
 use App\Http\Controllers\Administrator\UserController;
-use App\Http\Controllers\Exports\BorrowingReportExport;
+use App\Http\Controllers\Administrator\BorrowingReportExport;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:administrator')->name('administrators.')->prefix('administrator')->group(function () {
